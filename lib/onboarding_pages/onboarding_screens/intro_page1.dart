@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:medlink/widgets/custom%20shapes/circular_container.dart';
 import 'package:medlink/widgets/custom%20shapes/final_curve_widget.dart';
 
@@ -20,7 +19,7 @@ class IntroPage1 extends StatelessWidget {
             complete_curved_widget(
               child: Container(
         color: const Color.fromRGBO(0, 122, 135, 100),
-        padding: EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
 
         
               
@@ -59,7 +58,7 @@ class IntroPage1 extends StatelessWidget {
       ),
       
             ),
-          SizedBox(
+          const SizedBox(
             height: 10.0, // Add 0.0 for specifying unit
           ),
           Container(

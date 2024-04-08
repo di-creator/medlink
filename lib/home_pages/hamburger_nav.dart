@@ -10,8 +10,8 @@ class DrawerNav extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
-            accountName: Text("Rose Gold"), 
-            accountEmail: Text('rosegold@gmail.com'),
+            accountName: const Text("Rose Gold"), 
+            accountEmail: const Text('rosegold@gmail.com'),
 
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
@@ -21,8 +21,8 @@ class DrawerNav extends StatelessWidget {
                 ),
                 ),
             ),
-            decoration: BoxDecoration(
-              color: const Color.fromRGBO(0, 122, 135, 100),
+            decoration: const BoxDecoration(
+              color: Color.fromRGBO(0, 122, 135, 100),
               image: DecorationImage(image: AssetImage('assets/images/backgroundone.jpg'), fit: BoxFit.cover)
             ),
             )

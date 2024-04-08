@@ -31,7 +31,7 @@ class Homepage extends StatelessWidget {
       ),
       body: ListView(
         padding: const EdgeInsets.all(14),
-        children: [
+        children: const [
 
         ],
       ),
@@ -40,9 +40,9 @@ class Homepage extends StatelessWidget {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.white,
         color: Colors.greenAccent,
-        animationDuration: Duration(milliseconds: 300),
+        animationDuration: const Duration(milliseconds: 300),
         
-        items: [
+        items: const [
           Icon(Ionicons.home_outline),
           Icon(Ionicons.calendar_outline),
           Icon(Ionicons.folder_open_outline),

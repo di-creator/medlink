@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medlink/Authentication/Login_features/login.dart';
-import 'package:medlink/home_pages/home_screen.dart';
 import 'package:medlink/onboarding_pages/onboarding_screens/intro_page1.dart';
 import 'package:medlink/onboarding_pages/onboarding_screens/intro_page2.dart';
 import 'package:medlink/onboarding_pages/onboarding_screens/intro_page3.dart';
@@ -16,7 +15,7 @@ class OnboardingHome extends StatefulWidget {
 class _OnboardingHomeState extends State<OnboardingHome> {
 
   // controller to keep track of what page we are on
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
 
   // To keep track if we are on the lastpage
   bool onlastPage = false;
@@ -35,7 +34,7 @@ class _OnboardingHomeState extends State<OnboardingHome> {
               onlastPage = (index == 2);
             });
           },
-          children: [
+          children: const [
             IntroPage1(),
             IntroPage2(),
             IntroPage3(),
@@ -45,7 +44,7 @@ class _OnboardingHomeState extends State<OnboardingHome> {
 
         // Dot Indicator
         Container(
-          alignment: Alignment(0, 0.6) ,
+          alignment: const Alignment(0, 0.6) ,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -54,7 +53,7 @@ class _OnboardingHomeState extends State<OnboardingHome> {
                 onTap: () {
                   _controller.jumpToPage(2);
                 },
-                child: Text('Skip', style: TextStyle(
+                child: const Text('Skip', style: TextStyle(
                            fontSize: 16,
                            color: Colors.black,
                            fontWeight: FontWeight.bold,
@@ -73,10 +72,10 @@ class _OnboardingHomeState extends State<OnboardingHome> {
                 onTap: () {
                  Navigator.push(context, 
                  MaterialPageRoute(builder: (context) {
-                      return LoginScreen();
+                      return const LoginScreen();
                  }));
                 },
-                child: Text('Done',style: TextStyle(
+                child: const Text('Done',style: TextStyle(
                            fontSize: 16,
                            color: Colors.black,
                            fontWeight: FontWeight.bold,
@@ -89,11 +88,11 @@ class _OnboardingHomeState extends State<OnboardingHome> {
               GestureDetector(
                 onTap: () {
                   _controller.nextPage(
-                    duration: Duration(milliseconds: 500), 
+                    duration: const Duration(milliseconds: 500), 
                     curve: Curves.easeIn
                     );
                 },
-                child: Text('Next',style: TextStyle(
+                child: const Text('Next',style: TextStyle(
                            fontSize: 16,
                            color: Colors.black,
                            fontWeight: FontWeight.bold,
@@ -108,14 +107,14 @@ class _OnboardingHomeState extends State<OnboardingHome> {
           
           ),
 
-          SizedBox(
+          const SizedBox(
                     height: 10),
 
 // Elevated Button and text
               Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -127,12 +126,12 @@ class _OnboardingHomeState extends State<OnboardingHome> {
                         // Handle button tap
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(0, 122, 135, 100),
+                        backgroundColor: const Color.fromRGBO(0, 122, 135, 100),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: Text('Get Started', style: TextStyle(
+                      child: const Text('Get Started', style: TextStyle(
                            fontSize: 18,
                            color: Colors.white,
                            fontWeight: FontWeight.bold,
@@ -140,11 +139,11 @@ class _OnboardingHomeState extends State<OnboardingHome> {
                       ),),
                     ),
                   ),
-                  SizedBox(height: 1), // Adjust spacing as needed
+                  const SizedBox(height: 1), // Adjust spacing as needed
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         'Already have an account? ',
                         style: TextStyle(
                           fontSize: 12,
@@ -155,7 +154,7 @@ class _OnboardingHomeState extends State<OnboardingHome> {
                         onPressed: () {
                           // Handle text button tap
                         },
-                        child: Text(
+                        child: const Text(
                           'Log in',
                           style: TextStyle(
                             fontSize: 12,

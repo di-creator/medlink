@@ -11,18 +11,18 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             
           child: Column(
             children: [
-              TopLogoIntro(),
+              const TopLogoIntro(),
           // Form
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           Form(child: Column(
             children: [
             // Email
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 prefixIcon: Icon(Ionicons.mail_open_outline),
                 labelText: 'Email',
                 hintText: 'Enter your email',
@@ -30,9 +30,9 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             // Password
-             SizedBox(height: 20),
+             const SizedBox(height: 20),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.password),
                 labelText: 'Password',
                 hintText: 'Enter your password',
@@ -41,12 +41,12 @@ class LoginScreen extends StatelessWidget {
                       ),
                 obscureText: true,
             ),
-            SizedBox(height: 1), // Adjust spacing
+            const SizedBox(height: 1), // Adjust spacing
           // Forgot password button
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              const Row(
                 children: [
                   SizedBox(width: 2), // Adjust spacing
                   Icon(Icons.check_box_outline_blank), // Placeholder for checkbox
@@ -63,7 +63,7 @@ class LoginScreen extends StatelessWidget {
                 onPressed: () {
                   // Add action for forgot password
                 },
-                child: Text(
+                child: const Text(
                   'Forgot password?',
                   style: TextStyle(
                     color: Colors.red,
@@ -72,11 +72,11 @@ class LoginScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 25), // Adjust spacing
+          const SizedBox(height: 25), // Adjust spacing
           // OR divider container
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
-            child: Row(
+            margin: const EdgeInsets.symmetric(vertical: 10),
+            child: const Row(
               children: [
                 Expanded(
                   child: Divider(
@@ -105,7 +105,7 @@ class LoginScreen extends StatelessWidget {
           ),),
 
           // Sign up buttons
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -120,7 +120,7 @@ class LoginScreen extends StatelessWidget {
                       height: 60,
                     ),
                   ),
-                  SizedBox(width: 20), // Adjust spacing
+                  const SizedBox(width: 20), // Adjust spacing
                   // Apple sign up button
                   GestureDetector(
                     onTap: () {
@@ -137,9 +137,9 @@ class LoginScreen extends StatelessWidget {
 
 
           // Elevated Button and text
-          SizedBox(height: 25),  
+          const SizedBox(height: 25),  
             Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -151,12 +151,12 @@ class LoginScreen extends StatelessWidget {
                         // Handle button tap
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(0, 122, 135, 100),
+                        backgroundColor: const Color.fromRGBO(0, 122, 135, 100),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: Text('Get Started', style: TextStyle(
+                      child: const Text('Get Started', style: TextStyle(
                            fontSize: 18,
                            color: Colors.white,
                            fontWeight: FontWeight.bold,
@@ -164,11 +164,11 @@ class LoginScreen extends StatelessWidget {
                       ),),
                     ),
                   ),
-            SizedBox(height: 1), // Adjust spacing as needed
+            const SizedBox(height: 1), // Adjust spacing as needed
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         'Already have an account? ',
                         style: TextStyle(
                           fontSize: 12,
@@ -179,7 +179,7 @@ class LoginScreen extends StatelessWidget {
                         onPressed: () {
                           // Handle text button tap
                         },
-                        child: Text(
+                        child: const Text(
                           'Sign Up',
                           style: TextStyle(
                             fontSize: 12,
